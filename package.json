@@ -1,6 +1,6 @@
 {
   "name": "react-snapcode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Snapcode Component",
   "repository": {
     "type": "git",
@@ -22,12 +22,6 @@
     "snapcode",
     "react snapchat"
   ],
-  "options": {
-    "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
-  },
-  "scripts": {
-    "prepublish": "babel --plugins 'transform-es2015-modules-umd' src --ignore __tests__ --out-dir ./dist"
-  },
   "devDependencies": {
     "babel-cli": "^6.6.4",
     "babel-core": "^6.7.4",
@@ -54,10 +48,10 @@
   },
   "peerDependencies": {
     "react": "~0.14.8 || ^15.0.0",
-    "react-dom": "~0.14.8 || ^15.0.0",
-    "jquery": "^3.1.1"
+    "react-dom": "~0.14.8 || ^15.0.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.6.1"
+    "babel-runtime": "^6.6.1",
+    "jquery": "^3.1.1"
   }
 }

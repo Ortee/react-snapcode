@@ -28,8 +28,16 @@ import Snapcode from 'react-snapcode';
 ```javascript
 import Snapcode from 'react-snapcode';
 
-<Snapcode username="TestUsername" dotsColor="#FF0000" backgroundColor="#0000FF" ghostColor="#008000"/>
+<Snapcode
+    username="TestSnapchatUsername"
+    width="500px"
+    height="500px"
+    dotsColor="#FF0000"
+    backgroundColor="#0000FF"
+    ghostColor="#008000"
+/>
 ```
 ## Features
 * Username props is required.
-* backgroundColor, ghostColor, dotsColor are optional.
+* Width, height, backgroundColor, ghostColor, dotsColor are optional.
+* Height and width default is 320x320.

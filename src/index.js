@@ -25,13 +25,13 @@ class Snapcode extends React.Component {
     });
   }
 
-  render() {
+render() {
     return (
         <div>
-          <svg height="320"
+          <svg width={this.props.width ? this.props.width : 320}
+               height={this.props.height ? this.props.height : 320}
                version="1.1"
                viewBox="0 0 320 320"
-               width="320"
                xmlns="http://www.w3.org/2000/svg">
             <path d={this.state.svg[0]} fill={this.props.dotsColor ? this.props.dotsColor : "#000000"}/>
             <path d={this.state.svg[1]} fill={this.props.backgroundColor ? this.props.backgroundColor : "#FFFC00"}/>

@@ -90,15 +90,14 @@
     }
 
     _createClass(Snapcode, [{
-      key: 'componentDidMount',
-      value: function componentDidMount() {
+      key: 'componentWillMount',
+      value: function componentWillMount() {
         var url = 'https://crossorigin.me/https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username=' + this.props.username + '&type=SVG';
         _jquery2.default.ajax({
           type: "GET",
           url: url,
-          async: false,
           success: function (data) {
-            var svgData = this.setState({
+            this.setState({
               svg: Object.keys(data.children[0].children).map(function (key) {
                 return data.children[0].children[key].attributes[0].value;
               })

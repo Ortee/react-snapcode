@@ -9,14 +9,12 @@ class Snapcode extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     let url = 'https://crossorigin.me/https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username='+this.props.username +'&type=SVG';
     $.ajax({
-      type: "GET",
+      type: 'GET',
       url: url,
-      async: false,
       success: function(data) {
-        let svgData =
         this.setState({
           svg: Object.keys(data.children[0].children).map(function (key) {
             return data.children[0].children[key].attributes[0].value;
@@ -34,9 +32,9 @@ class Snapcode extends React.Component {
                version="1.1"
                viewBox="0 0 320 320"
                xmlns="http://www.w3.org/2000/svg">
-            <path d={this.state.svg[0]} fill={this.props.dotsColor ? this.props.dotsColor : "#000000"}/>
-            <path d={this.state.svg[1]} fill={this.props.backgroundColor ? this.props.backgroundColor : "#FFFC00"}/>
-            <path d={this.state.svg[2]} fill={this.props.ghostColor ? this.props.ghostColor : "#FFFFFF"}/>
+            <path d={this.state.svg[0]} fill={this.props.dotsColor ? this.props.dotsColor : '#000000'}/>
+            <path d={this.state.svg[1]} fill={this.props.backgroundColor ? this.props.backgroundColor : '#FFFC00'}/>
+            <path d={this.state.svg[2]} fill={this.props.ghostColor ? this.props.ghostColor : '#FFFFFF'}/>
           </svg>
         </div>
       )

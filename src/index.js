@@ -16,16 +16,17 @@ class Snapcode extends React.Component {
       url: url,
       async: false,
       success: function(data) {
+        let svgData =
         this.setState({
-          svg:[data.children[0].children[0].attributes[0].value,
-              data.children[0].children[1].attributes[0].value,
-              data.children[0].children[2].attributes[0].value]
+          svg: Object.keys(data.children[0].children).map(function (key) {
+            return data.children[0].children[key].attributes[0].value;
+          })
         });
       }.bind(this)
     });
   }
 
-render() {
+  render() {
     return (
         <div>
           <svg width={this.props.width ? this.props.width : 320}
@@ -39,7 +40,7 @@ render() {
           </svg>
         </div>
       )
-    }
-  };
+  }
+};
 
 export default Snapcode;

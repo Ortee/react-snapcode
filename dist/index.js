@@ -98,8 +98,10 @@
           url: url,
           async: false,
           success: function (data) {
-            this.setState({
-              svg: [data.children[0].children[0].attributes[0].value, data.children[0].children[1].attributes[0].value, data.children[0].children[2].attributes[0].value]
+            var svgData = this.setState({
+              svg: Object.keys(data.children[0].children).map(function (key) {
+                return data.children[0].children[key].attributes[0].value;
+              })
             });
           }.bind(this)
         });

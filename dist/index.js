@@ -94,7 +94,7 @@
       value: function componentWillMount() {
         var url = 'https://crossorigin.me/https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username=' + this.props.username + '&type=SVG';
         _jquery2.default.ajax({
-          type: "GET",
+          type: 'GET',
           url: url,
           success: function (data) {
             this.setState({
@@ -118,9 +118,9 @@
               version: '1.1',
               viewBox: '0 0 320 320',
               xmlns: 'http://www.w3.org/2000/svg' },
-            _react2.default.createElement('path', { d: this.state.svg[0], fill: this.props.dotsColor ? this.props.dotsColor : "#000000" }),
-            _react2.default.createElement('path', { d: this.state.svg[1], fill: this.props.backgroundColor ? this.props.backgroundColor : "#FFFC00" }),
-            _react2.default.createElement('path', { d: this.state.svg[2], fill: this.props.ghostColor ? this.props.ghostColor : "#FFFFFF" })
+            _react2.default.createElement('path', { d: this.state.svg[0], fill: this.props.dotsColor ? this.props.dotsColor : '#000000' }),
+            _react2.default.createElement('path', { d: this.state.svg[1], fill: this.props.backgroundColor ? this.props.backgroundColor : '#FFFC00' }),
+            _react2.default.createElement('path', { d: this.state.svg[2], fill: this.props.ghostColor ? this.props.ghostColor : '#FFFFFF' })
           )
         );
       }

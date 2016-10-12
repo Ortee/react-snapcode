@@ -11,6 +11,12 @@
     "email": "kontakt@mateuszoracz.pl",
     "url": "http://mateuszoracz.pl"
   },
+  "scripts": {
+    "test": "mocha $npm_package_options_mocha"
+  },
+  "options": {
+      "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Ortee/react-snapcode/issues"
